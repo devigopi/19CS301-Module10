@@ -73,37 +73,33 @@ print(f"Stack after rotation {stack}")
 
 
 EX: 10.3 QUEUE
-### Aim: To Write a python program to implement the stack using deque method for rotating the stack.
+### Aim: To Write a develop a python program to remove the last 3 values from the queue 
 ### Algorithm:
 
 STEP 1: Start.
+STEP 2:Initialize a queue (FIFO) — use collections.deque for efficient operations.
+STEP 3:Check if the queue has at least 3 elements:
+       If yes, repeat 3 times:
+       Use .pop() to remove the last (rightmost) element.
+       If no, clear the entire queue using .clear().
+STEP 4:Display the modified queue.
+STEP 5:End
 
-STEP 2: Import collections and import deque.
-
-STEP 3: Create a stack and a variable n.
-
-STEP 4: Get the number of inputs from user.
-
-STEP 5: Using a loop get the inputs from user.
-
-STEP 6: Append the even and unique elements in the stack.
-
-STEP 7: Print the result.
 ### Program:
 ```
-import collections
-stack = collections.deque([])
-n = int(input())
+from collections import deque
+que = []  
+n=int(input())
 for i in range(n):
-       x = int(input())
-        if x not in stack:
-          if x%2==0:
-             stack.appendleft(x)
-print(stack)
+    que.append(int(input()))  
+for i in range(3):
+    que.pop()
+print(que)
 ```
 ### Output:
-![image](https://github.com/user-attachments/assets/de6e3e09-b10b-42d4-9faf-32fcf990f29a)
- 
+
+ ![10 A](https://github.com/user-attachments/assets/0dfb96a4-ccdb-451b-acd6-e7772d9ac130)
+
 ### Result: Thus, the given program is implemented and executed successfully .
 
 
